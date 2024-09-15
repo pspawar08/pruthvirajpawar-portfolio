@@ -331,5 +331,28 @@
   <script src="lib/jquery.waypoints.min.js"></script>
   <script src="lib/jquery.filterizr.min.js"></script> 
   <script src="js/app.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCqBiRoGPJ5Uq1NvdL0uc8jrc9In0BZreo",
+      authDomain: "pruthviraj-portfolio.firebaseapp.com",
+      projectId: "pruthviraj-portfolio",
+      storageBucket: "pruthviraj-portfolio.appspot.com",
+      messagingSenderId: "928035000234",
+      appId: "1:928035000234:web:c46ee6ff9ada474a01a5d3",
+      measurementId: "G-KF4MJ1G8RQ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 </html>
