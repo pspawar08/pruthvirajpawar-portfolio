@@ -28,7 +28,7 @@ p {
 ::selection {
   background-color: #ee8683;
   color: #fff;
-  /* text-shadow: 4px 2px 2px #FFFD3A; */
+  text-shadow: 4px 2px 2px #FFFD3A;
 }
 
 .r-p {
@@ -50,7 +50,7 @@ p {
 }
 
 /* Preloader */
-/* .preloader{
+.preloader{
   position:fixed;
   top:0;
   left:0;
@@ -58,7 +58,7 @@ p {
   height:100%;
   background-color: red;
   z-index: 99998;
-} */
+} 
 
 .preloader:before {
   content: "";
@@ -168,7 +168,7 @@ header {
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/background.webp");
+    url("../images/background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -225,74 +225,6 @@ header {
   color: #ee8683;
 }
 
-/* Experience ---------------------------------------------------------*/
-.experience .progress {
-  height: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-.progress-color {
-  background-color: #ee8683 !important;
-}
-.experience label {
-  font-size: 20px;
-  margin: 10px;
-}
-
-/* Service */
-
-.card,
-.card-header {
-  background: #f8f9fa !important;
-}
-
-.card-header {
-  border: none !important;
-}
-
-.services .card-header i {
-  font-size: 50px;
-}
-.service-border {
-  height: 2px;
-  width: 40px;
-  margin: 15px auto;
-  background: #e65f78;
-  transition: 0.5s all;
-}
-.services h5:hover + .service-border {
-  width: 100px;
-}
-
-.services p {
-  font-size: 16px;
-}
-
-.services .btn:hover {
-  color: #000 !important;
-  background: #eee !important;
-}
-
-/* Testimony */
-
-.testimony .test-item {
-  max-width: 500px;
-  margin: 50px auto;
-}
-.testimony .test-item .test-img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-
-.testimony .test-item i {
-  color: grey;
-}
-
-.test-item p.test-name {
-  font-size: 11px;
-}
 
 /* Work */
 .work .card-wrapper {
@@ -350,8 +282,8 @@ footer .r-icon a:hover {
   header {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../images/background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      /* url("../images/background2.jpg"); */
     background-repeat: repeat;
     background-size: cover;
     background-position: -700px 0;

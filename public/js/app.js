@@ -1,3 +1,23 @@
+import { initializeApp } from  "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+import { getPerformance } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-performance.js"
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCqBiRoGPJ5Uq1NvdL0uc8jrc9In0BZreo",
+  authDomain: "pruthviraj-portfolio.firebaseapp.com",
+  projectId: "pruthviraj-portfolio",
+  storageBucket: "pruthviraj-portfolio.appspot.com",
+  messagingSenderId: "928035000234",
+  appId: "1:928035000234:web:c46ee6ff9ada474a01a5d3",
+  measurementId: "G-KF4MJ1G8RQ"
+};
+      // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const perf = getPerformance(app);
+const db = getFirestore(app);
+
 
 $(document).ready(function(){
 
@@ -16,7 +36,31 @@ $(window).on('scroll',function(){
   }
 });
 
-// progress bars
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+  try {
+    // Add the form data to the Firestore database
+    await addDoc(collection(db, "contacts"), {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+      timestamp: new Date() // Optionally add a timestamp
+    });
+    // Optionally, show a success message or clear the form
+    alert("Message submitted successfully!");
+    contactForm.reset();
+  } catch (error) {
+    console.error("Error submitting message: ", error);
+    alert("Failed to submit message. Please try again.");
+  }
+});
 
 var waypoint = new Waypoint({
   element: document.getElementById('experience'),
