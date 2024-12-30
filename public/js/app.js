@@ -39,21 +39,21 @@ $(window).on('scroll',function(){
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  // Get form values
+
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const subject = document.getElementById('subject').value;
   const message = document.getElementById('message').value;
   try {
-    // Add the form data to the Firestore database
+
     await addDoc(collection(db, "contacts"), {
       name: name,
       email: email,
       subject: subject,
       message: message,
-      timestamp: new Date() // Optionally add a timestamp
+      timestamp: new Date() 
     });
-    // Optionally, show a success message or clear the form
+
     alert("Message submitted successfully!");
     contactForm.reset();
   } catch (error) {
@@ -79,7 +79,6 @@ var waypoint = new Waypoint({
    offset: '90%'
 });
 
-// adding fadeInUp animation to child of div with class .way-col
 var $child = $('.way-fade-up').children();
 $child.each(function(){
   var self= $(this);
@@ -106,13 +105,10 @@ $child.each(function(){
 
 $('.owl-carousel').owlCarousel({
     loop:true,
-    // margin:10,   // since one item ou can remove it
     nav:false,
-    // dots:true,
     autoplay:true,
     autoplayTimeout:4000,
     items:1,
-    // animateOut : "fadeOut",
     animateIn : "fadeInRight"
 
 });
@@ -133,7 +129,7 @@ $('.img-loaded').imagesLoaded()
 
 
   var typed = new Typed(".element", {
-  strings: ["Pruthviraj Pawar", "a Full Stack Developer"],
+  strings: ["Pruthviraj Pawar", "a Java Developer"],
   smartBackspace: true,
    typeSpeed: 100,
    backSpeed: 100,
