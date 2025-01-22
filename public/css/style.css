@@ -277,3 +277,63 @@ footer .r-icon a:hover {
   }
 
 }
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(62, 164, 139, 0.7) 10%, rgba(0, 0, 0, 0) 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-info {
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.project-info h4 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+
+}
+
+.project-info p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  /* Styled font for description */
+  color: white;
+
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.1);
+  /* Slight zoom on hover */
+}
+
+.project-image-container:hover .project-overlay {
+  opacity: 1;
+  /* Show overlay on hover */
+}
