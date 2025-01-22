@@ -113,14 +113,12 @@ $('.owl-carousel').owlCarousel({
 
 });
 
-
-
   var typed = new Typed(".element", {
   strings: ["Pruthviraj Pawar", "a Java Developer"],
   smartBackspace: true,
-   typeSpeed: 100,
-   backSpeed: 100,
-   loop: true,
+  typeSpeed: 100,
+  backSpeed: 100,
+  loop: true,
   loopCount: Infinity,
   startDelay: 1000
 });
